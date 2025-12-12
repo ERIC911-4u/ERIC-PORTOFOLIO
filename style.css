@@ -136,15 +136,17 @@ a { color: inherit; text-decoration: none; }
   gap: 20px;
 }
 
-.cards.three {
-  grid-template-columns: repeat(3, 1fr);
+/* Update for 4 projects */
+.cards.four {
+  grid-template-columns: repeat(4, 1fr); /* 4 projects in one row */
 }
 
 @media (max-width: 800px) {
-  .cards.three { grid-template-columns: 1fr 1fr; }
+  .cards.four { grid-template-columns: 1fr 1fr; } /* 2 projects per row on small screens */
 }
+
 @media (max-width: 600px) {
-  .cards.three { grid-template-columns: 1fr; }
+  .cards.four { grid-template-columns: 1fr; } /* 1 project per row on very small screens */
 }
 
 .project {
@@ -152,7 +154,7 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid #222;
   border-radius: 12px;
   overflow: hidden;
-  transition: .2s;
+  transition: transform 0.2s;
 }
 
 .project:hover {
@@ -164,7 +166,6 @@ a { color: inherit; text-decoration: none; }
   object-fit: cover;
 }
 
-/* Tags */
 .tags span {
   background: #141414;
   padding: 4px 10px;
